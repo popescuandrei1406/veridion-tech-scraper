@@ -1,0 +1,271 @@
+[
+  {
+    "domain": "shopify.com",
+    "url": "https://shopify.com/",
+    "final_url": "https://www.shopify.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "wordpress.org",
+    "url": "https://wordpress.org/",
+    "final_url": "https://wordpress.org/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "woocommerce.com",
+    "url": "https://woocommerce.com/",
+    "final_url": "https://woocommerce.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WooCommerce",
+        "category": "E-commerce",
+        "evidence": [
+          "script_src: //wp-content/plugins/woocommerce//"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "drupal.org",
+    "url": "https://drupal.org/",
+    "final_url": "https://www.drupal.org/",
+    "status": 200,
+    "technologies": [],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "ghost.org",
+    "url": "https://ghost.org/",
+    "final_url": "https://ghost.org/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Netlify",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:x-nf-request-id: /.+/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "wix.com",
+    "url": "https://wix.com/",
+    "final_url": "https://www.wix.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Wix",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /^Wix/",
+          "script_src: /^(?:https?:)?//static\\.parastorage\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "HTML truncated at 2000000 bytes",
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "squarespace.com",
+    "url": "https://squarespace.com/",
+    "final_url": "https://www.squarespace.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Squarespace",
+        "category": "CMS",
+        "evidence": [
+          "script_src: /^(?:https?:)?//(?:assets|static\\d*)\\.squarespace\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "webflow.com",
+    "url": "https://webflow.com/",
+    "final_url": "https://webflow.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/"
+        ]
+      },
+      {
+        "name": "Webflow",
+        "category": "CMS",
+        "evidence": [
+          "selector: html[data-wf-site]"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "stripe.com",
+    "url": "https://stripe.com/",
+    "final_url": "https://stripe.com/en-ro",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Next.js",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //_next/static//",
+          "selector: script#__NEXT_DATA__"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "www.cloudflare.com",
+    "url": "https://www.cloudflare.com/",
+    "final_url": "https://www.cloudflare.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  }
+]

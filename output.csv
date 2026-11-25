@@ -1,0 +1,11 @@
+domain,url,final_url,status,technologies,categories,error,error_type,notes
+shopify.com,https://shopify.com/,https://www.shopify.com/,200,Cloudflare,Hosting/CDN,,,Followed 1 redirect(s)
+wordpress.org,https://wordpress.org/,https://wordpress.org/,200,Google Tag Manager; nginx; WordPress,Analytics/Marketing; Backend; CMS,,,
+woocommerce.com,https://woocommerce.com/,https://woocommerce.com/,200,Google Tag Manager; jQuery; nginx; React; WooCommerce; WordPress,Analytics/Marketing; Backend; CMS; E-commerce; JS Frameworks; JS Libraries,,,
+drupal.org,https://drupal.org/,https://www.drupal.org/,200,,,,,Followed 1 redirect(s)
+ghost.org,https://ghost.org/,https://ghost.org/,200,Netlify,Hosting/CDN,,,
+wix.com,https://wix.com/,https://www.wix.com/,200,Cloudflare; Wix,CMS; Hosting/CDN,,,HTML truncated at 2000000 bytes; Followed 1 redirect(s)
+squarespace.com,https://squarespace.com/,https://www.squarespace.com/,200,Squarespace,CMS,,,Followed 1 redirect(s)
+webflow.com,https://webflow.com/,https://webflow.com/,200,Cloudflare; Webflow,CMS; Hosting/CDN,,,
+stripe.com,https://stripe.com/,https://stripe.com/en-ro,200,Next.js; nginx,Backend; JS Frameworks,,,Followed 1 redirect(s)
+www.cloudflare.com,https://www.cloudflare.com/,https://www.cloudflare.com/,200,Cloudflare; Google Tag Manager,Analytics/Marketing; Hosting/CDN,,,

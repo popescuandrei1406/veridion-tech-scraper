@@ -1,0 +1,10 @@
+shopify.com
+wordpress.org
+woocommerce.com
+drupal.org
+ghost.org
+wix.com
+squarespace.com
+webflow.com
+stripe.com
+www.cloudflare.com
