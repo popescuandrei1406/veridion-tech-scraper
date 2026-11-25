@@ -7,9 +7,17 @@ The scanner includes 47 editable technology signatures. Each detection records
 which rules matched. It fetches the supplied page rather than crawling the whole
 website, and it does not execute JavaScript.
 
-**Dataset scope:** this repository contains a 10-domain sample and its real output.
-The assessment's 200-domain list was not supplied. The observations below describe
-only those 10 domains; a full assessment run is still needed before submission.
+**Dataset scope:** `domains.txt` contains the 200 unique domains from the official
+[challenge page](https://veridion.com/company/careers/challenges/internship), in
+their original order. The linked [Google Drive file](https://drive.google.com/file/d/1JeyDbO7TOeLPS_FsXf8YFsdENnmwlCJm/view?usp=sharing)
+is Parquet; its `root_domain` column was converted to one domain per line. The
+scraper reads the converted text directly, so Parquet libraries are not needed
+to run it. `output.json` and `output.csv` contain the full assessment run.
+
+Source Parquet SHA-256:
+`65e77097c669c29b392f3279a93f04566ab934cf1e8acfaf1ae4046a01e97bb2`.
+The conversion was checked against all 200 source rows, including order, without
+dropping unavailable domains or replacing them with easier targets.
 
 ## Run locally
 
@@ -31,7 +39,7 @@ python main.py domains.txt
 ```
 
 This writes `output.json` and `output.csv` in the current directory, replacing
-existing files. Both sample outputs are tracked in the repository.
+existing files. Both assessment outputs are tracked in the repository.
 
 ```bash
 python main.py domains.txt --concurrency 15 --output-dir outputs
@@ -73,9 +81,9 @@ signatures.py           Technology names, categories and detection rules
 models.py               Fetch, detection and output records
 exporter.py             JSON and CSV writers
 requirements.txt        Pinned direct runtime dependencies
-domains.txt             10-domain sample
-output.json             Sample results with matching evidence
-output.csv              Sample results in tabular form
+domains.txt             Official 200-domain challenge list
+output.json             Assessment results with matching evidence
+output.csv              Assessment results in tabular form
 tests/test_scraper.py   Offline regression tests
 ```
 
@@ -136,42 +144,100 @@ status; the error field determines whether the fetch succeeded. A missing respon
 has a null JSON status or an empty CSV cell. No match means insufficient evidence,
 not that the website uses no technology.
 
-## Observations from the included run
+## Observations from the 200-domain run
 
-The included outputs were generated on **25 November 2026**, using Python 3.12.10:
+The included outputs were generated on **25 November 2026**, using Python 3.12.10
+on Windows. The run started at 10:17:53 UTC and finished at 10:21:07 UTC:
 
 ```bash
-python main.py domains.txt --concurrency 5 --timeout 10 --domain-timeout 30 --retries 1
+python main.py domains.txt --concurrency 15 --timeout 15 --domain-timeout 90 --retries 2
 ```
 
 | Observation | Result |
 | --- | --- |
-| Inputs | 10 |
-| Successful final HTTP responses | 10, all HTTP 200 |
-| Fetch failures | 0 |
-| Domains with at least one detection | 9 |
-| Cloudflare detections | 4 |
-| Google Tag Manager detections | 3 |
-| nginx detections | 3 |
-| WordPress detections | 2 |
-| Responses truncated at the body limit | 1: wix.com |
+| Inputs and output records | 200, in source order |
+| Elapsed time | 194.04 seconds |
+| Successful fetches | 145 (72.5%) |
+| Failed fetches | 55 (27.5%) |
+| Domains with at least one detection | 166 (83%) |
+| Successful domains with detections | 140 |
+| Failed domains with detections | 26 |
+| Distinct technology names detected | 30 |
+| Domain/technology pairs | 419 |
+| HTTPS-to-HTTP fallback attempts | 34; 12 ended successfully |
+| Possible-SPA notes | 17; 6 on successful fetches |
+| Truncated responses | 0 |
 
-WooCommerce's site produced six detections, including WooCommerce, WordPress and
-jQuery. Drupal's site returned HTTP 200 but matched no rules. Shopify's site
-matched Cloudflare only, and Ghost's matched Netlify only. A vendor's marketing
-site is not proof that it exposes the vendor's product signatures.
+The 419 pairs count each technology once per domain, not once per matching rule.
+They are **not 419 distinct technologies**. Veridion reports identifying 477
+different technologies on this list. This implementation has only 47 technology
+signatures and found 30 of those. It therefore covers a much narrower vocabulary;
+the reference labels and crawl conditions are unavailable, so these figures do
+not establish precision or recall.
 
-Stripe redirected to `/en-ro` from this execution environment and exposed Next.js
-and nginx signals, but no Stripe payment SDK signature. The locale-dependent
-redirect illustrates why crawl location can affect results. Wix exceeded the
-2 MB body limit, so its detections cover only the retained HTML.
+The most frequent detections, including signals on failed responses, were:
 
-These are observations, not a precision/recall benchmark: there is no independently
-labeled ground truth. No rate-limit, TLS or timeout failures occurred in this
-sample; those paths are covered by offline tests rather than claimed as live
-findings. The small vendor-heavy list cannot represent the missing 200-domain
-assessment dataset. Replace `domains.txt` with that list, rerun the same command
-and update this section before presenting full-dataset conclusions.
+| Technology | Domains |
+| --- | ---: |
+| jQuery | 77 |
+| WordPress | 60 |
+| Cloudflare | 60 |
+| Apache HTTP Server | 39 |
+| nginx | 28 |
+| Google Analytics | 28 |
+| PHP | 26 |
+| LiteSpeed | 14 |
+| Google Tag Manager | 13 |
+| React | 12 |
+
+Commerce rules identified WooCommerce on five domains, Shopify on two, and
+Magento and Salesforce Commerce Cloud on one each. These are observations of the
+fetched page, not a complete inventory of each site's integrations. For example,
+`253media.com` matched Webflow, Cloudflare, jQuery, Google Analytics, Meta Pixel
+and Microsoft Clarity. Those six signals illustrate the mix of site builder,
+infrastructure and marketing tags that the scanner can expose.
+
+### Failures and practical limits
+
+| Final error type | Domains |
+| --- | ---: |
+| HTTP 403 | 22 |
+| Network error | 10 |
+| HTTP 404 | 8 |
+| HTTP 503 | 3 |
+| HTTP 409 | 3 |
+| Timeout | 3 |
+| HTTP 454 | 2 |
+| TLS verification error | 2 |
+| HTTP 526 | 1 |
+| HTTP 500 | 1 |
+
+The network-error group includes eight DNS resolution failures, one connection
+failure and one server disconnect. Timeouts include two domains that exhausted
+the 90-second budget. HTTP 454 and 409 are retained as returned statuses rather
+than assigned an unverified cause. The two final TLS failures persisted after
+fallback; other certificate failures recovered through HTTP or ended in another
+error category. The table describes final outcomes, not every failed attempt.
+
+Twelve domains reached a successful response after HTTPS failed, including
+`yourfamilylines.com` and `dioxoxigenio.com.br`. This demonstrates the coverage
+benefit of fallback, while also exposing its trade-off: the HTTP response may be
+less trustworthy or different from the intended HTTPS site.
+
+Failed pages still produced technology signals on 26 domains. Those signals can
+identify an edge provider or a challenge page, not necessarily the origin stack.
+Likewise, 11 of the 17 possible-SPA notes occurred on failed responses. Sparse
+HTML is therefore too weak a reason to launch a browser automatically; status and
+challenge indicators should be checked first. Five successful responses matched
+no rules, which warrants inspecting their assets rather than assuming an empty
+stack. No response hit the body limit in this run.
+
+For the Shopify analytics use case, the next improvement would be to inspect
+unmatched scripts on reachable commerce sites, add validated competitor-specific
+signatures, and selectively render pages that could load analytics after consent
+or JavaScript execution. Broader signatures would improve recall, but copying
+generic keyword patterns would also increase false positives. These outputs are
+a reproducible baseline, not a claim of matching Veridion's technology coverage.
 
 ## Debate 1: Implementation issues and fixes
 

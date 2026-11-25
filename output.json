@@ -1,8 +1,118 @@
 [
   {
-    "domain": "shopify.com",
-    "url": "https://shopify.com/",
-    "final_url": "https://www.shopify.com/",
+    "domain": "jcmobilecigars.com",
+    "url": "https://jcmobilecigars.com/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ConnectError: [Errno 11001] getaddrinfo failed",
+    "error_type": "network_error",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: [Errno 11001] getaddrinfo failed); trying HTTP",
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)"
+    ]
+  },
+  {
+    "domain": "somalidisablesupport.com",
+    "url": "https://somalidisablesupport.com/",
+    "final_url": "https://somalidisablesupport.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "yourfamilylines.com",
+    "url": "https://yourfamilylines.com/",
+    "final_url": "http://yourfamilylines.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "szentkristofudvarhaz.hu",
+    "url": "https://szentkristofudvarhaz.hu/",
+    "final_url": "https://szentkristofudvarhaz.hu/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "disneystore.com",
+    "url": "https://disneystore.com/",
+    "final_url": "https://www.disneystore.com/",
     "status": 200,
     "technologies": [
       {
@@ -11,6 +121,14 @@
         "evidence": [
           "header:cf-ray: /.+/",
           "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Salesforce Commerce Cloud",
+        "category": "E-commerce",
+        "evidence": [
+          "script_src: //on/demandware\\.static//",
+          "cookie: /^dwsid$/"
         ]
       }
     ],
@@ -21,16 +139,71 @@
     ]
   },
   {
-    "domain": "wordpress.org",
-    "url": "https://wordpress.org/",
-    "final_url": "https://wordpress.org/",
+    "domain": "chavchavadze-m2-41-tbilisi.booked.net",
+    "url": "https://chavchavadze-m2-41-tbilisi.booked.net/",
+    "final_url": "https://chavchavadze-m2-41-tbilisi.booked.net/",
+    "status": 404,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 404",
+    "error_type": "http_404",
+    "notes": []
+  },
+  {
+    "domain": "trs-energycontrol.de",
+    "url": "https://trs-energycontrol.de/",
+    "final_url": "https://www.trs-energycontrol.de/",
     "status": 200,
     "technologies": [
       {
-        "name": "Google Tag Manager",
-        "category": "Analytics/Marketing",
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
         "evidence": [
-          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Wix",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /^Wix/",
+          "script_src: /^(?:https?:)?//static\\.parastorage\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "xn--kleoghvidevareservice-qfc.dk",
+    "url": "https://xn--kleoghvidevareservice-qfc.dk/",
+    "final_url": "https://xn--kleoghvidevareservice-qfc.dk/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
         ]
       },
       {
@@ -55,16 +228,72 @@
     "notes": []
   },
   {
-    "domain": "woocommerce.com",
-    "url": "https://woocommerce.com/",
-    "final_url": "https://woocommerce.com/",
+    "domain": "gogroupauto.com",
+    "url": "https://gogroupauto.com/",
+    "final_url": "https://www.gogroupauto.com/",
+    "status": 403,
+    "technologies": [],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: All connection attempts failed); trying HTTP",
+      "Followed 2 redirect(s)"
+    ]
+  },
+  {
+    "domain": "231selfstorage.com",
+    "url": "https://231selfstorage.com/",
+    "final_url": "https://231selfstorage.com/",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "globalrn.com",
+    "url": "https://globalrn.com/",
+    "final_url": "https://globalrn.com/",
+    "status": 526,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 526",
+    "error_type": "http_526",
+    "notes": []
+  },
+  {
+    "domain": "cytofastmed.com",
+    "url": "https://cytofastmed.com/",
+    "final_url": "https://www.cytofastmed.com/",
     "status": 200,
     "technologies": [
       {
-        "name": "Google Tag Manager",
-        "category": "Analytics/Marketing",
+        "name": "Bootstrap",
+        "category": "UI Libraries",
         "evidence": [
-          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+          "stylesheet: //bootstrap(?:\\.min)?\\.css(?:[?#]|$)/",
+          "script_src: //bootstrap(?:\\.bundle)?(?:\\.min)?\\.js(?:[?#]|$)/"
         ]
       },
       {
@@ -75,17 +304,67 @@
         ]
       },
       {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "5starremoval.weebly.com",
+    "url": "https://5starremoval.weebly.com/",
+    "final_url": "https://5starremoval.weebly.com/",
+    "status": 404,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 404",
+    "error_type": "http_404",
+    "notes": []
+  },
+  {
+    "domain": "coenzwezerijnen.nu",
+    "url": "https://coenzwezerijnen.nu/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ConnectError: All connection attempts failed",
+    "error_type": "network_error",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: All connection attempts failed); trying HTTP",
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)"
+    ]
+  },
+  {
+    "domain": "gutendorf.ru",
+    "url": "https://gutendorf.ru/",
+    "final_url": "https://gutendorf.ru/",
+    "status": 200,
+    "technologies": [
+      {
         "name": "nginx",
         "category": "Backend",
         "evidence": [
           "header:server: /^nginx\\b/"
-        ]
-      },
-      {
-        "name": "React",
-        "category": "JS Frameworks",
-        "evidence": [
-          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
         ]
       },
       {
@@ -110,28 +389,39 @@
     "notes": []
   },
   {
-    "domain": "drupal.org",
-    "url": "https://drupal.org/",
-    "final_url": "https://www.drupal.org/",
-    "status": 200,
-    "technologies": [],
-    "error": null,
-    "error_type": null,
-    "notes": [
-      "Followed 1 redirect(s)"
-    ]
-  },
-  {
-    "domain": "ghost.org",
-    "url": "https://ghost.org/",
-    "final_url": "https://ghost.org/",
+    "domain": "katesworldtravel.com",
+    "url": "https://katesworldtravel.com/",
+    "final_url": "https://katesworldtravel.com/",
     "status": 200,
     "technologies": [
       {
-        "name": "Netlify",
-        "category": "Hosting/CDN",
+        "name": "jQuery",
+        "category": "JS Libraries",
         "evidence": [
-          "header:x-nf-request-id: /.+/"
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Meta Pixel",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /connect\\.facebook\\.net/[^'\\\"\\s]*fbevents\\.js/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
         ]
       }
     ],
@@ -140,9 +430,28 @@
     "notes": []
   },
   {
-    "domain": "wix.com",
-    "url": "https://wix.com/",
-    "final_url": "https://www.wix.com/",
+    "domain": "3xd.co.uk",
+    "url": "https://3xd.co.uk/",
+    "final_url": "https://3xd.co.uk/",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": []
+  },
+  {
+    "domain": "gapconstructionwi.com",
+    "url": "https://gapconstructionwi.com/",
+    "final_url": "https://www.gapconstructionwi.com/",
     "status": 200,
     "technologies": [
       {
@@ -151,6 +460,13 @@
         "evidence": [
           "header:cf-ray: /.+/",
           "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
         ]
       },
       {
@@ -165,14 +481,168 @@
     "error": null,
     "error_type": null,
     "notes": [
-      "HTML truncated at 2000000 bytes",
       "Followed 1 redirect(s)"
     ]
   },
   {
-    "domain": "squarespace.com",
-    "url": "https://squarespace.com/",
-    "final_url": "https://www.squarespace.com/",
+    "domain": "imgs.co.jp",
+    "url": "https://imgs.co.jp/",
+    "final_url": "https://www.imgs.co.jp/index.html",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 3 redirect(s)"
+    ]
+  },
+  {
+    "domain": "clotting-guide.online",
+    "url": "https://clotting-guide.online/",
+    "final_url": "https://www.clotting-guide.online/de/ueber/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 2 redirect(s)"
+    ]
+  },
+  {
+    "domain": "38inspect.com",
+    "url": "https://38inspect.com/",
+    "final_url": "https://www.38inspect.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "newbeaverborough.org",
+    "url": "https://newbeaverborough.org/",
+    "final_url": "https://newbeaverborough.org/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "largsbaychiropractic.com.au",
+    "url": "https://largsbaychiropractic.com.au/",
+    "final_url": "https://www.largsbaychiropractic.com.au/",
     "status": 200,
     "technologies": [
       {
@@ -190,16 +660,420 @@
     ]
   },
   {
-    "domain": "webflow.com",
-    "url": "https://webflow.com/",
-    "final_url": "https://webflow.com/",
+    "domain": "rsthealthcare.com",
+    "url": "https://rsthealthcare.com/",
+    "final_url": "https://rsthealthcare.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "dioxoxigenio.com.br",
+    "url": "https://dioxoxigenio.com.br/",
+    "final_url": "http://dioxoxigenio.com.br/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'dioxoxigenio.com.br'. (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "doringpoort.com",
+    "url": "https://doringpoort.com/",
+    "final_url": "https://doringpoort.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "fsbwyoming.com",
+    "url": "https://fsbwyoming.com/",
+    "final_url": "https://myfrbank.com/",
     "status": 200,
     "technologies": [
       {
         "name": "Cloudflare",
         "category": "Hosting/CDN",
         "evidence": [
-          "header:cf-ray: /.+/"
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 2 redirect(s)"
+    ]
+  },
+  {
+    "domain": "msc-manching.de",
+    "url": "https://msc-manching.de/",
+    "final_url": "https://msc-manching.de/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "Bootstrap",
+        "category": "UI Libraries",
+        "evidence": [
+          "stylesheet: //bootstrap(?:\\.min)?\\.css(?:[?#]|$)/",
+          "script_src: //bootstrap(?:\\.bundle)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "sgsextremaratio.it",
+    "url": "https://sgsextremaratio.it/",
+    "final_url": "https://sgsextremaratio.it/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "Nuxt",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //_nuxt//",
+          "selector: script#__NUXT_DATA__"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "coastwidemechanicalcentralcoast.com.au",
+    "url": "https://coastwidemechanicalcentralcoast.com.au/",
+    "final_url": "https://coastwidemechanicalcentralcoast.com.au/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "amourfinder.com",
+    "url": "https://amourfinder.com/",
+    "final_url": "https://www.amourfinder.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "cookie: /^PHPSESSID$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "lojatatical.com.br",
+    "url": "https://lojatatical.com.br/",
+    "final_url": "https://www.lojatatical.com.br/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "Magento",
+        "category": "E-commerce",
+        "evidence": [
+          "inline_script: /\\bMagento_[A-Z]\\w*//"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "cookie: /^PHPSESSID$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "jobresourcecentre.com",
+    "url": "https://jobresourcecentre.com/",
+    "final_url": "https://jobresourcecentre.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Bootstrap",
+        "category": "UI Libraries",
+        "evidence": [
+          "stylesheet: //bootstrap(?:\\.min)?\\.css(?:[?#]|$)/",
+          "script_src: //bootstrap(?:\\.bundle)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Fastly",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:fastly-restarts: /^\\d+$/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "ferienwohnung-kastell.de",
+    "url": "https://ferienwohnung-kastell.de/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ConnectError: [Errno 11001] getaddrinfo failed",
+    "error_type": "network_error",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: [Errno 11001] getaddrinfo failed); trying HTTP",
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)"
+    ]
+  },
+  {
+    "domain": "253media.com",
+    "url": "https://253media.com/",
+    "final_url": "https://www.253media.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Meta Pixel",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /connect\\.facebook\\.net/[^'\\\"\\s]*fbevents\\.js/"
+        ]
+      },
+      {
+        "name": "Microsoft Clarity",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /https://www\\.clarity\\.ms/tag//"
         ]
       },
       {
@@ -212,12 +1086,1382 @@
     ],
     "error": null,
     "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "velvety.eu",
+    "url": "https://velvety.eu/",
+    "final_url": "https://www.velvety-cosmetics.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "doortodoororganics.com",
+    "url": "https://doortodoororganics.com/",
+    "final_url": "https://doortodoororganics.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
     "notes": []
   },
   {
-    "domain": "stripe.com",
-    "url": "https://stripe.com/",
-    "final_url": "https://stripe.com/en-ro",
+    "domain": "kentpropertyrenovations.co.uk",
+    "url": "https://kentpropertyrenovations.co.uk/",
+    "final_url": "https://kentpropertyrenovations.co.uk/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "fisherinvestments.com",
+    "url": "https://fisherinvestments.com/",
+    "final_url": "https://fisherinvestments.com/",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Vercel",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:x-vercel-id: /.+/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": []
+  },
+  {
+    "domain": "rionecontrastanga.net",
+    "url": "https://rionecontrastanga.net/",
+    "final_url": "https://rionecontrastanga.net/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "stwannas.com",
+    "url": "https://stwannas.com/",
+    "final_url": "https://www.stwannas.com/",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "empresasori.com",
+    "url": "https://empresasori.com/",
+    "final_url": "http://empresasori.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "Bootstrap",
+        "category": "UI Libraries",
+        "evidence": [
+          "stylesheet: //bootstrap(?:\\.min)?\\.css(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "familybroker.cz",
+    "url": "https://familybroker.cz/",
+    "final_url": "https://familybroker.cz/",
+    "status": 404,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 404",
+    "error_type": "http_404",
+    "notes": []
+  },
+  {
+    "domain": "genesisny.net",
+    "url": "https://genesisny.net/",
+    "final_url": "https://genesisny.net/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "5w.design",
+    "url": "https://5w.design/",
+    "final_url": "https://5w.design/",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "huberautomotive.com",
+    "url": "https://huberautomotive.com/",
+    "final_url": "https://huberautomotive.com/",
+    "status": 403,
+    "technologies": [],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": []
+  },
+  {
+    "domain": "marien-apotheke-grefrath-app.de",
+    "url": "https://marien-apotheke-grefrath-app.de/",
+    "final_url": "https://www.marien-apotheke-grefrath-app.de/",
+    "status": 200,
+    "technologies": [],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "centreconsiliereavort.ro",
+    "url": "https://centreconsiliereavort.ro/",
+    "final_url": "https://centreconsiliereavort.ro/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "infoaboutnetwork.com",
+    "url": "https://infoaboutnetwork.com/",
+    "final_url": "https://www.infoaboutnetwork.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "11853prospecthill.com",
+    "url": "https://11853prospecthill.com/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ConnectError: [Errno 11001] getaddrinfo failed",
+    "error_type": "network_error",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: [Errno 11001] getaddrinfo failed); trying HTTP",
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)"
+    ]
+  },
+  {
+    "domain": "passwordstore.it",
+    "url": "https://passwordstore.it/",
+    "final_url": "https://passwordstore.it/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "avocatalinamanciu.ro",
+    "url": "https://avocatalinamanciu.ro/",
+    "final_url": "https://avocatalinamanciu.ro/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "abcdpinturas.com.br",
+    "url": "https://abcdpinturas.com.br/",
+    "final_url": "https://americansolutions.com.br/congelado.html",
+    "status": 404,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      }
+    ],
+    "error": "HTTP 404",
+    "error_type": "http_404",
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'abcdpinturas.com.br'. (_ssl.c:1010)); trying HTTP",
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "dssfla.com",
+    "url": "https://dssfla.com/",
+    "final_url": "https://www.dssfla.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "weducars.co.za",
+    "url": "https://weducars.co.za/",
+    "final_url": "https://weducars.co.za/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      },
+      {
+        "name": "WooCommerce",
+        "category": "E-commerce",
+        "evidence": [
+          "script_src: //wp-content/plugins/woocommerce//"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "4stonebuildings.com",
+    "url": "https://4stonebuildings.com/",
+    "final_url": "https://4stonebuildings.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "maniaupiekszania.pl",
+    "url": "https://maniaupiekszania.pl/",
+    "final_url": "https://maniaupiekszania.pl/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "sprucemeadowsmd.com",
+    "url": "https://sprucemeadowsmd.com/",
+    "final_url": "https://sprucemeadowsmd.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "natedea.co.uk",
+    "url": "https://natedea.co.uk/",
+    "final_url": "https://natedea.co.uk/",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "loizillon.com",
+    "url": "https://loizillon.com/",
+    "final_url": "https://www.loizillon.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "haus-muehlenfeld-pommerby.de",
+    "url": "https://haus-muehlenfeld-pommerby.de/",
+    "final_url": "https://haus-muehlenfeld-pommerby.de/",
+    "status": 503,
+    "technologies": [
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": "HTTP 503",
+    "error_type": "http_503",
+    "notes": [
+      "Retrying HTTP 503 (attempt 1)",
+      "Retrying HTTP 503 (attempt 2)"
+    ]
+  },
+  {
+    "domain": "arenaskolor.se",
+    "url": "https://arenaskolor.se/",
+    "final_url": "https://arenaskolor.se/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "boken.ch",
+    "url": "https://boken.ch/",
+    "final_url": "https://boken.ch/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "restwellstreetmedicalcentre.com.au",
+    "url": "https://restwellstreetmedicalcentre.com.au/",
+    "final_url": "https://restwellstreetmedicalcentre.com.au/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Bootstrap",
+        "category": "UI Libraries",
+        "evidence": [
+          "stylesheet: //bootstrap(?:\\.min)?\\.css(?:[?#]|$)/",
+          "script_src: //bootstrap(?:\\.bundle)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      },
+      {
+        "name": "Microsoft Clarity",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /https://www\\.clarity\\.ms/tag//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "den-a-sha.co.jp",
+    "url": "https://den-a-sha.co.jp/",
+    "final_url": "http://den-a-sha.co.jp/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'den-a-sha.co.jp'. (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "365outsource.com",
+    "url": "https://365outsource.com/",
+    "final_url": "https://www.365outsource.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "aida-cruises.at",
+    "url": "https://aida-cruises.at/",
+    "final_url": "https://aida-cruises.at/",
+    "status": 403,
+    "technologies": [],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": []
+  },
+  {
+    "domain": "lets.gr",
+    "url": "https://lets.gr/",
+    "final_url": "https://lets.gr/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "skywayrestaurants.net",
+    "url": "https://skywayrestaurants.net/",
+    "final_url": "https://skywayrestaurants.net/cgi-sys/suspendedpage.cgi",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "2020wealthadvisory.com",
+    "url": "https://2020wealthadvisory.com/",
+    "final_url": "https://2020wealthadvisory.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "hnafirm.com",
+    "url": "https://hnafirm.com/",
+    "final_url": "https://www.hnafirm.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Bootstrap",
+        "category": "UI Libraries",
+        "evidence": [
+          "stylesheet: //bootstrap(?:\\.min)?\\.css(?:[?#]|$)/",
+          "script_src: //bootstrap(?:\\.bundle)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 2 redirect(s)"
+    ]
+  },
+  {
+    "domain": "itsolutions24.pl",
+    "url": "https://itsolutions24.pl/",
+    "final_url": "https://itsolutions24.pl/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "aaice.net",
+    "url": "https://aaice.net/",
+    "final_url": "https://aaice.net/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "HubSpot",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "script_src: /^(?:https?:)?//js(?:-[a-z0-9]+)?\\.hs-scripts\\.com//"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "ecolab.com",
+    "url": "https://ecolab.com/",
+    "final_url": "https://www.ecolab.com/",
+    "status": 403,
+    "technologies": [],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)); trying HTTP",
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "mehmetefendimacedonia.com",
+    "url": "https://mehmetefendimacedonia.com/",
+    "final_url": "https://mehmetefendimacedonia.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "cookie: /^PHPSESSID$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "laplumedelisibilite.fr",
+    "url": "https://laplumedelisibilite.fr/",
+    "final_url": "https://www.laplumedelisibilite.fr/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/",
+          "cookie: /^PHPSESSID$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "2ldm.com",
+    "url": "https://2ldm.com/",
+    "final_url": "https://2ldm.com/",
+    "status": 404,
+    "technologies": [],
+    "error": "HTTP 404",
+    "error_type": "http_404",
+    "notes": []
+  },
+  {
+    "domain": "westchesterpointechiro.com",
+    "url": "https://westchesterpointechiro.com/",
+    "final_url": "https://www.westchesterpointechiro.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "cookie: /^PHPSESSID$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "cei-expertises.fr",
+    "url": "https://cei-expertises.fr/",
+    "final_url": "https://www.cei-expertises.fr/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "seringa-safaris.com",
+    "url": "https://seringa-safaris.com/",
+    "final_url": "https://seringasafaris.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "1planettechnologies.weebly.com",
+    "url": "https://1planettechnologies.weebly.com/",
+    "final_url": "https://1planettechnologies.weebly.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "soziale-dreigliederung.de",
+    "url": "https://soziale-dreigliederung.de/",
+    "final_url": "https://soziale-dreigliederung.de/",
+    "status": 403,
+    "technologies": [],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": []
+  },
+  {
+    "domain": "premierhomeremodeling.net",
+    "url": "https://premierhomeremodeling.net/",
+    "final_url": "https://premierhomeremodeling.net/",
     "status": 200,
     "technologies": [
       {
@@ -238,14 +2482,73 @@
     ],
     "error": null,
     "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "bas-ingenieria.cl",
+    "url": "https://bas-ingenieria.cl/",
+    "final_url": "https://bas-ingenieria.cl/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Bootstrap",
+        "category": "UI Libraries",
+        "evidence": [
+          "stylesheet: //bootstrap(?:\\.min)?\\.css(?:[?#]|$)/",
+          "script_src: //bootstrap(?:\\.bundle)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "produkttheater.de",
+    "url": "https://produkttheater.de/",
+    "final_url": "http://produkttheater.de/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "cookie: /^PHPSESSID$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
     "notes": [
-      "Followed 1 redirect(s)"
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'produkttheater.de'. (_ssl.c:1010)); trying HTTP"
     ]
   },
   {
-    "domain": "www.cloudflare.com",
-    "url": "https://www.cloudflare.com/",
-    "final_url": "https://www.cloudflare.com/",
+    "domain": "unnames.com",
+    "url": "https://unnames.com/",
+    "final_url": "https://unnames.com/",
     "status": 200,
     "technologies": [
       {
@@ -257,6 +2560,586 @@
         ]
       },
       {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Shopify",
+        "category": "E-commerce",
+        "evidence": [
+          "cookie: /^_shopify_/",
+          "script_src: /^(?:https?:)?//cdn\\.shopify\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "handycars.com",
+    "url": "https://handycars.com/",
+    "final_url": "https://www.handycars.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "antikebau.de",
+    "url": "https://antikebau.de/",
+    "final_url": "https://antikebau.de/",
+    "status": 500,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      }
+    ],
+    "error": "HTTP 500",
+    "error_type": "http_500",
+    "notes": [
+      "Retrying HTTP 500 (attempt 1)",
+      "Retrying HTTP 500 (attempt 2)"
+    ]
+  },
+  {
+    "domain": "3strandschurch.org",
+    "url": "https://3strandschurch.org/",
+    "final_url": "https://3strandschurch.org/",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "alabamabuildingcontractor.com",
+    "url": "https://alabamabuildingcontractor.com/",
+    "final_url": "https://www.alabamabuildingcontractor.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "resourceservicesolutions.com",
+    "url": "https://resourceservicesolutions.com/",
+    "final_url": "https://resourceservicesolutions.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "skywardspeech.com.au",
+    "url": "https://skywardspeech.com.au/",
+    "final_url": "https://www.skywardspeech.com.au/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "sevecoitalia.com",
+    "url": "https://sevecoitalia.com/",
+    "final_url": "https://www.sevecoitalia.com",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "ASP.NET",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bASP\\.NET\\b/",
+          "header:x-aspnet-version: /.+/",
+          "cookie: /^ASP\\.NET_SessionId$/"
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Microsoft IIS",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Microsoft-IIS\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "nielsbirk.dk",
+    "url": "https://nielsbirk.dk/",
+    "final_url": "https://nielsbirk.dk/cgi-sys/suspendedpage.cgi",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "branson-connection.com",
+    "url": "https://branson-connection.com/",
+    "final_url": "http://branson-connection.com/",
+    "status": 200,
+    "technologies": [],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)); trying HTTP",
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "phucankhanggroup.com",
+    "url": "https://phucankhanggroup.com/",
+    "final_url": "https://phucankhanggroup.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "ASP.NET",
+        "category": "Backend",
+        "evidence": [
+          "header:x-aspnet-version: /.+/",
+          "cookie: /^ASP\\.NET_SessionId$/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Microsoft IIS",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Microsoft-IIS\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "roccofortehotels.cn",
+    "url": "https://roccofortehotels.cn/",
+    "final_url": "https://www.roccofortehotels.cn/",
+    "status": 403,
+    "technologies": [],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "everhartsoutdoor.com",
+    "url": "https://everhartsoutdoor.com/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.everhartsoutdoor.com'. (_ssl.c:1010)",
+    "error_type": "ssl_error",
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.everhartsoutdoor.com'. (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "europeaninns.com",
+    "url": "https://europeaninns.com/",
+    "final_url": "https://europeaninns.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "massageforworldpeace.com",
+    "url": "https://massageforworldpeace.com/",
+    "final_url": "https://www.massageforworldpeace.com",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "cultivateventures.co.nz",
+    "url": "https://cultivateventures.co.nz/",
+    "final_url": "https://cultivateventures.co.nz/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Squarespace",
+        "category": "CMS",
+        "evidence": [
+          "script_src: /^(?:https?:)?//(?:assets|static\\d*)\\.squarespace\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "amaronbattery.in",
+    "url": "https://amaronbattery.in/",
+    "final_url": "http://amaronbattery.in/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'amaronbattery.in'. (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "radxmobile.com",
+    "url": "https://radxmobile.com/",
+    "final_url": "https://www.radxmobile.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Wix",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /^Wix/",
+          "script_src: /^(?:https?:)?//static\\.parastorage\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "2-com.net",
+    "url": "https://2-com.net/",
+    "final_url": "https://2-com.net/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "3bsexcavating.com",
+    "url": "https://3bsexcavating.com/",
+    "final_url": "https://3bsexcavating.com/",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "weissbauchpapageien.de",
+    "url": "https://weissbauchpapageien.de/",
+    "final_url": "https://p2-1.afp24.net/true1.php?id=weis44j4dh3o49xk",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Followed 1 redirect(s)",
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "959marine.com",
+    "url": "https://959marine.com/",
+    "final_url": "https://www.959marine.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "hansis-knusperhendl-foodtruck.eatbu.com",
+    "url": "https://hansis-knusperhendl-foodtruck.eatbu.com/",
+    "final_url": "https://hansis-knusperhendl-foodtruck.eatbu.com/?lang=en",
+    "status": 200,
+    "technologies": [
+      {
         "name": "Google Tag Manager",
         "category": "Analytics/Marketing",
         "evidence": [
@@ -266,6 +3149,2469 @@
     ],
     "error": null,
     "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "broganlmt.com",
+    "url": "https://broganlmt.com/",
+    "final_url": "https://www.broganlmt.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Wix",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /^Wix/",
+          "script_src: /^(?:https?:)?//static\\.parastorage\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "juanmunozhomesmart.com",
+    "url": "https://juanmunozhomesmart.com/",
+    "final_url": "https://www.juanmunozhomesmart.com/",
+    "status": 403,
+    "technologies": [],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "buchhaltungsservice-koenig.de",
+    "url": "https://buchhaltungsservice-koenig.de/",
+    "final_url": "https://buchhaltungsservice-koenig.de/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
     "notes": []
+  },
+  {
+    "domain": "solvos.nl",
+    "url": "https://solvos.nl/",
+    "final_url": "https://www.solvos.nl/nl/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 2 redirect(s)"
+    ]
+  },
+  {
+    "domain": "261welfarefund.com",
+    "url": "https://261welfarefund.com/",
+    "final_url": "https://261welfarefund.com/",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "costa-coffee.be",
+    "url": "https://costa-coffee.be/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "Domain budget exceeded (90s)",
+    "error_type": "timeout",
+    "notes": [
+      "Retrying timeout (attempt 1)",
+      "Retrying timeout (attempt 2)",
+      "HTTPS failed (ReadTimeout: ); trying HTTP",
+      "Retrying timeout (attempt 1)",
+      "Retrying timeout (attempt 2)"
+    ]
+  },
+  {
+    "domain": "startravelcompany.com",
+    "url": "https://startravelcompany.com/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ReadTimeout: ",
+    "error_type": "timeout",
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)); trying HTTP",
+      "Retrying timeout (attempt 1)",
+      "Retrying timeout (attempt 2)"
+    ]
+  },
+  {
+    "domain": "disinfestazioniepiscine.it",
+    "url": "https://disinfestazioniepiscine.it/",
+    "final_url": "https://www.disinfestazioniepiscine.it/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Meta Pixel",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /connect\\.facebook\\.net/[^'\\\"\\s]*fbevents\\.js/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "lscms.org",
+    "url": "https://lscms.org/",
+    "final_url": "https://lscms.org/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "Bootstrap",
+        "category": "UI Libraries",
+        "evidence": [
+          "stylesheet: //bootstrap(?:\\.min)?\\.css(?:[?#]|$)/",
+          "script_src: //bootstrap(?:\\.bundle)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "3dwealthadvisory.com",
+    "url": "https://3dwealthadvisory.com/",
+    "final_url": "https://3dwealthadvisory.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "jackwills.com",
+    "url": "https://jackwills.com/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "Domain budget exceeded (90s)",
+    "error_type": "timeout",
+    "notes": [
+      "Retrying timeout (attempt 1)",
+      "Retrying timeout (attempt 2)",
+      "HTTPS failed (ReadTimeout: ); trying HTTP",
+      "Retrying timeout (attempt 1)"
+    ]
+  },
+  {
+    "domain": "nevsproductions.com",
+    "url": "https://nevsproductions.com/",
+    "final_url": "https://nevsproductions.com/",
+    "status": 503,
+    "technologies": [
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": "HTTP 503",
+    "error_type": "http_503",
+    "notes": [
+      "Retrying HTTP 503 (attempt 1)",
+      "Retrying HTTP 503 (attempt 2)"
+    ]
+  },
+  {
+    "domain": "kande-hoikuen.ed.jp",
+    "url": "https://kande-hoikuen.ed.jp/",
+    "final_url": "https://kande-hoikuen.ed.jp/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "orifoodsco.com",
+    "url": "https://orifoodsco.com/",
+    "final_url": "https://www.orifoodsco.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Squarespace",
+        "category": "CMS",
+        "evidence": [
+          "script_src: /^(?:https?:)?//(?:assets|static\\d*)\\.squarespace\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "deerfieldbeachautomall.com",
+    "url": "https://deerfieldbeachautomall.com/",
+    "final_url": "https://deerfieldbeachautomall.com/",
+    "status": 403,
+    "technologies": [],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": []
+  },
+  {
+    "domain": "insieme.stanford.edu",
+    "url": "https://insieme.stanford.edu/",
+    "final_url": "https://insieme.stanford.edu/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Drupal",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bDrupal\\b/",
+          "header:x-drupal-cache: /.+/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "layer7innovations.ca",
+    "url": "https://layer7innovations.ca/",
+    "final_url": "https://layer7innovations.ca/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Bootstrap",
+        "category": "UI Libraries",
+        "evidence": [
+          "stylesheet: //bootstrap(?:\\.min)?\\.css(?:[?#]|$)/",
+          "script_src: //bootstrap(?:\\.bundle)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "makpharma-eg.com",
+    "url": "https://makpharma-eg.com/",
+    "final_url": "https://makpharma-eg.com/",
+    "status": 200,
+    "technologies": [],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "ejc-courtage-assurances.fr",
+    "url": "https://ejc-courtage-assurances.fr/",
+    "final_url": "https://ejc-courtage-assurances.fr/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "ferrateoxidant.com",
+    "url": "https://ferrateoxidant.com/",
+    "final_url": "https://ferrateoxidant.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "oakwell.vet",
+    "url": "https://oakwell.vet/",
+    "final_url": "https://oakwell.vet/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Meta Pixel",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /connect\\.facebook\\.net/[^'\\\"\\s]*fbevents\\.js/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "mysterion.hr",
+    "url": "https://mysterion.hr/",
+    "final_url": "https://mysterion.hr/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Bootstrap",
+        "category": "UI Libraries",
+        "evidence": [
+          "script_src: //bootstrap(?:\\.bundle)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "howellmotors.com",
+    "url": "https://howellmotors.com/",
+    "final_url": "https://www.howellmotors.com/",
+    "status": 403,
+    "technologies": [],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: All connection attempts failed); trying HTTP",
+      "Followed 2 redirect(s)"
+    ]
+  },
+  {
+    "domain": "lorenz-baumarkt.de",
+    "url": "https://lorenz-baumarkt.de/",
+    "final_url": "https://www.lorenz-baumarkt.de/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "PayPal",
+        "category": "Payments",
+        "evidence": [
+          "script_src: /^(?:https?:)?//www\\.paypal\\.com/sdk/js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "eclairage-solaire-occitanie.com",
+    "url": "https://eclairage-solaire-occitanie.com/",
+    "final_url": "https://eclairage-solaire-occitanie.com/",
+    "status": 404,
+    "technologies": [
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Wix",
+        "category": "CMS",
+        "evidence": [
+          "script_src: /^(?:https?:)?//static\\.parastorage\\.com//"
+        ]
+      }
+    ],
+    "error": "HTTP 404",
+    "error_type": "http_404",
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "cmc01village.com",
+    "url": "https://cmc01village.com/",
+    "final_url": "https://cmc01village.com/",
+    "status": 200,
+    "technologies": [],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "maiquotes.net",
+    "url": "https://maiquotes.net/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'maiquotes.net'. (_ssl.c:1010)",
+    "error_type": "ssl_error",
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'maiquotes.net'. (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "cmresolutions.com",
+    "url": "https://cmresolutions.com/",
+    "final_url": "http://cmresolutions.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cmresolutions.com'. (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "wglchurch.com",
+    "url": "https://wglchurch.com/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ConnectError: [Errno 11001] getaddrinfo failed",
+    "error_type": "network_error",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: [Errno 11001] getaddrinfo failed); trying HTTP",
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)"
+    ]
+  },
+  {
+    "domain": "nwmotorinn.com",
+    "url": "https://nwmotorinn.com/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ConnectError: [Errno 11001] getaddrinfo failed",
+    "error_type": "network_error",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: [Errno 11001] getaddrinfo failed); trying HTTP",
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)"
+    ]
+  },
+  {
+    "domain": "dorpsbelangen.nu",
+    "url": "https://dorpsbelangen.nu/",
+    "final_url": "https://www.dorpsbelangen.nu/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "littlerockafamily.de",
+    "url": "https://littlerockafamily.de/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ConnectError: [Errno 11001] getaddrinfo failed",
+    "error_type": "network_error",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: [Errno 11001] getaddrinfo failed); trying HTTP",
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)"
+    ]
+  },
+  {
+    "domain": "evelynanders.com",
+    "url": "https://evelynanders.com/",
+    "final_url": "https://evelynanders.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "domekvefaru.com",
+    "url": "https://domekvefaru.com/",
+    "final_url": "https://www.domekvefaru.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "cookie: /^PHPSESSID$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "sdmdjentertainment.com",
+    "url": "https://sdmdjentertainment.com/",
+    "final_url": "https://sdmdjentertainment.com/",
+    "status": 200,
+    "technologies": [],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "ideenhunger.com",
+    "url": "https://ideenhunger.com/",
+    "final_url": "https://www.ideenhunger.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "Hotjar",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /\\b_hjSettings\\s*=/"
+        ]
+      },
+      {
+        "name": "Meta Pixel",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /connect\\.facebook\\.net/[^'\\\"\\s]*fbevents\\.js/"
+        ]
+      },
+      {
+        "name": "Webflow",
+        "category": "CMS",
+        "evidence": [
+          "selector: html[data-wf-site]"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "jenniferbacksteininteriors.com",
+    "url": "https://jenniferbacksteininteriors.com/",
+    "final_url": "https://www.jenniferbacksteininteriors.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Squarespace",
+        "category": "CMS",
+        "evidence": [
+          "script_src: /^(?:https?:)?//(?:assets|static\\d*)\\.squarespace\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "elcolegiocongresosyrestaurante.com",
+    "url": "https://elcolegiocongresosyrestaurante.com/",
+    "final_url": "https://elcolegiocongresosyrestaurante.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "northshoremacnut.com",
+    "url": "https://northshoremacnut.com/",
+    "final_url": "https://www.northshoremacnut.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Wix",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /^Wix/",
+          "script_src: /^(?:https?:)?//static\\.parastorage\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "powercleaning.services",
+    "url": "https://powercleaning.services/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "RemoteProtocolError: Server disconnected without sending a response.",
+    "error_type": "network_error",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (RemoteProtocolError: Server disconnected without sending a response.); trying HTTP",
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)"
+    ]
+  },
+  {
+    "domain": "stoperbis.pl",
+    "url": "https://stoperbis.pl/",
+    "final_url": "https://stoperbis.pl/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "verticalcommunitychurch.com",
+    "url": "https://verticalcommunitychurch.com/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ConnectError: [Errno 11001] getaddrinfo failed",
+    "error_type": "network_error",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: [Errno 11001] getaddrinfo failed); trying HTTP",
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)"
+    ]
+  },
+  {
+    "domain": "gitesducharmois.fr",
+    "url": "https://gitesducharmois.fr/",
+    "final_url": "https://www.gitesducharmois.fr/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Wix",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /^Wix/",
+          "script_src: /^(?:https?:)?//static\\.parastorage\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "allegrocreditbeta.com",
+    "url": "https://allegrocreditbeta.com/",
+    "final_url": "https://www.synchrony.com/help/faqs?tab=cc-fin#allegro-transition-to-synchrony-pay-later",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "hoffmaninstitute.co.uk",
+    "url": "https://hoffmaninstitute.co.uk/",
+    "final_url": "https://hoffmaninstitute.co.uk/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WooCommerce",
+        "category": "E-commerce",
+        "evidence": [
+          "script_src: //wp-content/plugins/woocommerce//"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "a3sec.com",
+    "url": "https://a3sec.com/",
+    "final_url": "https://a3sec.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "Hotjar",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /\\b_hjSettings\\s*=/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "concrete-fitness.edan.io",
+    "url": "https://concrete-fitness.edan.io/",
+    "final_url": "https://concrete-fitness.edan.io/",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "nicholsonchiro.com",
+    "url": "https://nicholsonchiro.com/",
+    "final_url": "https://nicholsonchiro.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "la-residenza-del-principe-rome-it.booked.net",
+    "url": "https://la-residenza-del-principe-rome-it.booked.net/",
+    "final_url": "https://la-residenza-del-principe-rome-it.booked.net/",
+    "status": 404,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 404",
+    "error_type": "http_404",
+    "notes": []
+  },
+  {
+    "domain": "jonesbuickgmc.com",
+    "url": "https://jonesbuickgmc.com/",
+    "final_url": "https://jonesbuickgmc.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "xn--jobvrkstedet-9cb.nu",
+    "url": "https://xn--jobvrkstedet-9cb.nu/",
+    "final_url": "https://xn--jobvrkstedet-9cb.nu/",
+    "status": 454,
+    "technologies": [],
+    "error": "HTTP 454",
+    "error_type": "http_454",
+    "notes": []
+  },
+  {
+    "domain": "appelpsychotherapy.com",
+    "url": "https://appelpsychotherapy.com/",
+    "final_url": "https://www.appelpsychotherapy.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Wix",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /^Wix/",
+          "script_src: /^(?:https?:)?//static\\.parastorage\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "brucebournesold.com",
+    "url": "https://brucebournesold.com/",
+    "final_url": "https://www.brucebournesold.com/",
+    "status": 403,
+    "technologies": [],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "pcb-cpb.com",
+    "url": "https://pcb-cpb.com/",
+    "final_url": "https://www.pcb-cpb.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //react(?:\\.production\\.min|\\.development|\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Wix",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /^Wix/",
+          "script_src: /^(?:https?:)?//static\\.parastorage\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "chiantifiorentino.it",
+    "url": "https://chiantifiorentino.it/",
+    "final_url": "https://www.chiantifiorentino.it/web/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "ASP.NET",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bASP\\.NET\\b/"
+        ]
+      },
+      {
+        "name": "Bootstrap",
+        "category": "UI Libraries",
+        "evidence": [
+          "stylesheet: //bootstrap(?:\\.min)?\\.css(?:[?#]|$)/",
+          "script_src: //bootstrap(?:\\.bundle)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Microsoft IIS",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Microsoft-IIS\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 3 redirect(s)"
+    ]
+  },
+  {
+    "domain": "11thhourracing.org",
+    "url": "https://11thhourracing.org/",
+    "final_url": "https://11thhourracing.org/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Webflow",
+        "category": "CMS",
+        "evidence": [
+          "selector: html[data-wf-site]"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "miratrade.com.tr",
+    "url": "https://miratrade.com.tr/",
+    "final_url": "https://miratrade.com.tr/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "freo.com.au",
+    "url": "https://freo.com.au/",
+    "final_url": "https://freo.com.au/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "fluxar.com.ar",
+    "url": "https://fluxar.com.ar/",
+    "final_url": "https://www.fluxar.com.ar/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/",
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "redpants.jp",
+    "url": "https://redpants.jp/",
+    "final_url": "https://www.redpants.jp/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Squarespace",
+        "category": "CMS",
+        "evidence": [
+          "script_src: /^(?:https?:)?//(?:assets|static\\d*)\\.squarespace\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "bata.edu.hu",
+    "url": "https://bata.edu.hu/",
+    "final_url": "https://bata.edu.hu/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "3-energie-klaas.de",
+    "url": "https://3-energie-klaas.de/",
+    "final_url": "https://3-energie-klaas.de/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "labdemo.com",
+    "url": "https://labdemo.com/",
+    "final_url": "https://labdemo.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "script_src: //wp-(?:content|includes)//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "1ststopsupply.com",
+    "url": "https://1ststopsupply.com/",
+    "final_url": "http://1ststopsupply.com/",
+    "status": 409,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 409",
+    "error_type": "http_409",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "celiabedilia.com",
+    "url": "https://celiabedilia.com/",
+    "final_url": "http://celiabedilia.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Retrying timeout (attempt 1)",
+      "Retrying timeout (attempt 2)",
+      "HTTPS failed (ConnectTimeout: ); trying HTTP"
+    ]
+  },
+  {
+    "domain": "davidloeppke.com",
+    "url": "https://davidloeppke.com/",
+    "final_url": "https://davidloeppke.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "script_src: /^(?:https?:)?//www\\.googletagmanager\\.com/gtag/js\\?[^#]*\\bid=(?:G-|UA-)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "wrinkle-pei.cz",
+    "url": "https://wrinkle-pei.cz/",
+    "final_url": "http://wrinkle-pei.cz/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'wrinkle-pei.cz'. (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "koniczynka.info.pl",
+    "url": "https://koniczynka.info.pl/",
+    "final_url": "https://www.koniczynka.info.pl/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "Meta Pixel",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /connect\\.facebook\\.net/[^'\\\"\\s]*fbevents\\.js/"
+        ]
+      },
+      {
+        "name": "WooCommerce",
+        "category": "E-commerce",
+        "evidence": [
+          "script_src: //wp-content/plugins/woocommerce//",
+          "selector: body.woocommerce, body.woocommerce-page"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "footasylum.com",
+    "url": "https://footasylum.com/",
+    "final_url": "https://www.footasylum.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Next.js",
+        "category": "JS Frameworks",
+        "evidence": [
+          "script_src: //_next/static//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "2agateway.com",
+    "url": "https://2agateway.com/",
+    "final_url": "https://2agateway.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "ledestjernenstu.dk",
+    "url": "https://ledestjernenstu.dk/",
+    "final_url": "https://ledestjernenstu.dk/",
+    "status": 454,
+    "technologies": [],
+    "error": "HTTP 454",
+    "error_type": "http_454",
+    "notes": []
+  },
+  {
+    "domain": "1stlocksheathscouts.org.uk",
+    "url": "https://1stlocksheathscouts.org.uk/",
+    "final_url": "https://1stlocksheathscouts.org.uk/",
+    "status": 403,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 403",
+    "error_type": "http_403",
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "tamcconstruction.net",
+    "url": "https://tamcconstruction.net/",
+    "final_url": "",
+    "status": null,
+    "technologies": [],
+    "error": "ConnectError: [Errno 11001] getaddrinfo failed",
+    "error_type": "network_error",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: [Errno 11001] getaddrinfo failed); trying HTTP",
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)"
+    ]
+  },
+  {
+    "domain": "abbikadabbisbakingco.com",
+    "url": "https://abbikadabbisbakingco.com/",
+    "final_url": "https://www.abbikadabbisbakingco.com",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)",
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "herbalwise.ie",
+    "url": "https://herbalwise.ie/",
+    "final_url": "https://herbalwise.ie/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "Shopify",
+        "category": "E-commerce",
+        "evidence": [
+          "cookie: /^_shopify_/",
+          "script_src: /^(?:https?:)?//cdn\\.shopify\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "deepseass.com",
+    "url": "https://deepseass.com/",
+    "final_url": "https://www.deepseass.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "aardvarkelectriccorp.com",
+    "url": "https://aardvarkelectriccorp.com/",
+    "final_url": "http://aardvarkelectriccorp.com/",
+    "status": 409,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 409",
+    "error_type": "http_409",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "needaphysio.com",
+    "url": "https://needaphysio.com/",
+    "final_url": "https://www.needaphysio.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "thomasrosenbaum.com",
+    "url": "https://thomasrosenbaum.com/",
+    "final_url": "https://www.thomasrosenbaum.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Squarespace",
+        "category": "CMS",
+        "evidence": [
+          "script_src: /^(?:https?:)?//(?:assets|static\\d*)\\.squarespace\\.com//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
+  },
+  {
+    "domain": "100wwcstlw.org",
+    "url": "https://100wwcstlw.org/",
+    "final_url": "https://100wwcstlw.org/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "shapirolawfirm.com",
+    "url": "https://shapirolawfirm.com/",
+    "final_url": "http://shapirolawfirm.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "joseph-herber.business.site",
+    "url": "https://joseph-herber.business.site/",
+    "final_url": "https://joseph-herber.business.site/",
+    "status": 404,
+    "technologies": [],
+    "error": "HTTP 404",
+    "error_type": "http_404",
+    "notes": []
+  },
+  {
+    "domain": "arol.cl",
+    "url": "https://arol.cl/",
+    "final_url": "https://arol.cl/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "sindacatobadanti.it",
+    "url": "https://sindacatobadanti.it/",
+    "final_url": "https://www.sindacatobadanti.it/",
+    "status": 503,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": "HTTP 503",
+    "error_type": "http_503",
+    "notes": [
+      "Retrying HTTP 503 (attempt 1)",
+      "Retrying HTTP 503 (attempt 2)",
+      "Followed 1 redirect(s)",
+      "Little visible text: possible SPA; browser rendering may improve coverage"
+    ]
+  },
+  {
+    "domain": "1stclairavewest.com",
+    "url": "https://1stclairavewest.com/",
+    "final_url": "http://1stclairavewest.com/",
+    "status": 409,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      }
+    ],
+    "error": "HTTP 409",
+    "error_type": "http_409",
+    "notes": [
+      "Retrying network_error (attempt 1)",
+      "Retrying network_error (attempt 2)",
+      "HTTPS failed (ConnectError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "lighthouseprc.org",
+    "url": "https://lighthouseprc.org/",
+    "final_url": "https://lighthouseprc.org/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"](?:G-|UA-)/"
+        ]
+      },
+      {
+        "name": "Google Tag Manager",
+        "category": "Analytics/Marketing",
+        "evidence": [
+          "inline_script: /googletagmanager\\.com/gtm\\.js/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "5rcircleprocess.weebly.com",
+    "url": "https://5rcircleprocess.weebly.com/",
+    "final_url": "https://5rcircleprocess.weebly.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Cloudflare",
+        "category": "Hosting/CDN",
+        "evidence": [
+          "header:cf-ray: /.+/",
+          "header:server: /^cloudflare$/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "unitedveterinaryservice.com",
+    "url": "https://unitedveterinaryservice.com/",
+    "final_url": "https://unitedveterinaryservice.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "construccionesyatecnicas.com",
+    "url": "https://construccionesyatecnicas.com/",
+    "final_url": "http://construccionesyatecnicas.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "nginx",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^nginx\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "HTTPS failed (ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)); trying HTTP"
+    ]
+  },
+  {
+    "domain": "joburgheritage.org.za",
+    "url": "https://joburgheritage.org.za/",
+    "final_url": "https://joburgheritage.org.za/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      },
+      {
+        "name": "jQuery",
+        "category": "JS Libraries",
+        "evidence": [
+          "script_src: //jquery(?:-\\d+(?:\\.\\d+)*)?(?:\\.min)?\\.js(?:[?#]|$)/"
+        ]
+      },
+      {
+        "name": "WooCommerce",
+        "category": "E-commerce",
+        "evidence": [
+          "script_src: //wp-content/plugins/woocommerce//"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "bfnelson.it",
+    "url": "https://bfnelson.it/",
+    "final_url": "https://bfnelson.it/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "LiteSpeed",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^LiteSpeed\\b/"
+        ]
+      },
+      {
+        "name": "PHP",
+        "category": "Backend",
+        "evidence": [
+          "header:x-powered-by: /\\bPHP\\b/",
+          "cookie: /^PHPSESSID$/"
+        ]
+      },
+      {
+        "name": "WordPress",
+        "category": "CMS",
+        "evidence": [
+          "meta:generator: /\\bWordPress\\b/",
+          "script_src: //wp-(?:content|includes)//",
+          "stylesheet: //wp-content//"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": []
+  },
+  {
+    "domain": "rivithead.com",
+    "url": "https://rivithead.com/",
+    "final_url": "https://www.rivithead.com/",
+    "status": 200,
+    "technologies": [
+      {
+        "name": "Apache HTTP Server",
+        "category": "Backend",
+        "evidence": [
+          "header:server: /^Apache\\b/"
+        ]
+      }
+    ],
+    "error": null,
+    "error_type": null,
+    "notes": [
+      "Followed 1 redirect(s)"
+    ]
   }
 ]
